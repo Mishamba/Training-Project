@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Cheems browser</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <button id="icon">
+        <i>Cheems</i>
+        <br>
+        <i>Browser</i>
+    </button>
+    <div class="authorization-block">
+        <div class="authorization-fields.active">
+            <input type="text" id="username-input" />
+            <br>
+            <input type="password" id="password-input" />
+            <br>
+            <button class="sign-in-button">Sign In</button>
+        </div>
+        <div class="user-data.active">
+            <p>Role : Guest</p>
+            <p>Username : Guest</p>
+        </div>
+    </div>
+    <br>
+    <p class="header">Files</p>
+    <br>
+    <button class="create-file-button">Create File</button>
+    <br>
+    <table class="table">
+        <tr>
+            <th>
+                <button class="element">
+                    <img src="file.png" alt="" style="vertical-align: middle;" width="90px" height="90px">
+                    <p class="element-text">file</p>
+                </button>
+            </th>
+            <th>
+                <button class="element">
+                    <img src="file.png" alt="" style="vertical-align: middle;" width="90px" height="90px">
+                    <p class="element-text">file</p>
+                </button>
+            </th>
+        </tr>
+    </table>
+    <br>
+
+    <ul id="right-click-menu">
+        <li id="open-file">Open file</li>
+    </ul>
+
+    <script src="logic.js"></script>
+</body>
+
+</html>
