@@ -30,7 +30,7 @@ body {
     border-radius: 5px;
     position: relative;
     margin-top: 10px;
-    left: -310px;
+    left: -410px;
     top: 200px;
 }
 
@@ -95,8 +95,8 @@ body {
     border-spacing: 30px 60px;
     position: relative;
     float: left;
-    top: 180px;
-    left: -300px
+    top: 130px;
+    left: -280px
 }
 
 .element {
