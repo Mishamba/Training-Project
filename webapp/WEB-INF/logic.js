@@ -36,9 +36,9 @@ let username = GUEST;
 let role = GUEST;
 
 var serviceEndpoint = 'http://localhost:8081';
-let loginEndpoint = '/login';
-let createFileEndpoint = '/create-file';
-let deleteFileEndpoint = '/delete-file';
+var loginEndpoint = '/login';
+var createFileEndpoint = '/create-file';
+var deleteFileEndpoint = '/delete-file';
 
 var currentPath = '/home/mishamba';
 let currentFiles = {};
@@ -77,7 +77,8 @@ async function deleteFile() {
     let response = await fetch(serviceEndpoint + deleteFileEndpoint, {
         method: 'POST',
         headers: {
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json',
+            'Authentication': jwtToken
         },
         body: JSON.stringify({ fileName: fileName, path: currentPath })
     });
@@ -88,6 +89,28 @@ async function deleteFile() {
     } else {
         alert('Can\'t delete file');
     }
+}
+
+async function createFile() {
+    let fileName = prompt('Enter file name', 'smth.txt');
+
+    let response = await fetch(serviceEndpoint + createFileEndpoint, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'Authentication': jwtToken
+        },
+        body: JSON.stringify({ fileName: fileName, path: currentPath })
+    });
+
+    if (response.ok) {
+        alert('Created file!');
+        openFolderByPath(currentPath);
+    } else {
+        alert('can\'t create file');
+    }
+
+    openForlderByPath(currentPath);
 }
 
 function openForlder() {
@@ -114,6 +137,8 @@ async function openFolderByPath(path) {
         for (let i = 0; i < jsonResponse.length; i++) {
             currentFiles.put({ fileName: jsonResponse[i]['name'], type: jsonResponse[i]['type'] });
         }
+
+        showFiles();
     } else {
         alert('can\'t open folder.');
     }
@@ -206,23 +231,4 @@ function provideMenu(file) {
     }
 
     return menu;
-}
-
-async function createFile() {
-    let fileName = prompt('Enter file name', 'smth.txt');
-
-    let response = await fetch(serviceEndpoint + createFileEndpoint, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ fileName: fileName, path: currentPath })
-    });
-
-    if (response.ok) {
-        alert('Created file!');
-        openFolderByPath(currentPath);
-    } else {
-        alert('can\'t create file');
-    }
 }
