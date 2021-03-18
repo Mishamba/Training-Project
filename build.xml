@@ -1,0 +1,744 @@
+<?xml version="1.0"?>
+<project name="Training-Project" xmlns:ivy="antlib:org.apache.ivy.ant">
+	<property name="build" location="build"></property>
+	<property name="classes" location="${build}/classes"></property>
+	<property name="src" location="src"></property>
+	<property name="webapp" location="webapp"></property>
+
+	<property name="junit" location="/home/mishamba/.ivy2/cache/junit/junit/jars"></property>
+
+    <property 
+        name="org.apache.tomcat.embed.core" 
+        location="/home/mishamba/.ivy2/cache/org.apache.tomcat.embed/tomcat-embed-core/jars"></property>
+    <property 
+        name="org.apache.tomcat.embaded.websocket" 
+        location="/home/mishamba/.ivy2/cache/org.apache.tomcat.embed/tomcat-embed-websocket/jars"></property>
+
+    <property 
+        name="org.apache.loggin.log4j" 
+        location="/home/mishamba/.ivy2/cache/org.apache.logging.log4j/log4j-to-slf4j/jars"></property>
+
+    <property 
+        name="org.apiguardian" 
+        location="/home/mishamba/.ivy2/cache/org.apiguardian/apiguardian-api/jars"></property>
+
+    <property 
+        name="org.aspectj" 
+        location="/home/mishamba/.ivy2/cache/org.aspectj/aspectjweaver/jars"></property>
+
+    <property 
+        name="org.assertj" 
+        location="/home/mishamba/.ivy2/cache/org.assertj/assertj-core/jars"></property>
+
+    <property 
+        name="org.dom4j" 
+        location="/home/mishamba/.ivy2/cache/org.assertj/assertj-core/jars"></property>
+
+    <property 
+        name="com.fasterxml" 
+        location="/home/mishamba/.ivy2/cache/com.fasterxml/classmate/bundles"></property>
+
+    <property 
+        name="com.fasterxml.jackson" 
+        location="/home/mishamba/.ivy2/cache/com.fasterxml.jackson"></property>
+
+    <property 
+        name="com.fasterxml.jackson.datatype.jdk" 
+        location="/home/mishamba/.ivy2/cache/com.fasterxml.jackson.datatype/jackson-datatype-jdk8/bundles"></property>
+
+    <property 
+        name="com.fasterxml.jackson.datatype.jsr" 
+        location="/home/mishamba/.ivy2/cache/com.fasterxml.jackson.datatype/jackson-datatype-jsr310/bundles"></property>
+            
+    <property 
+        name="com.fasterxml.jackson.core.jackson-annotations" 
+        location="/home/mishamba/.ivy2/cache/com.fasterxml.jackson.core/jackson-annotations/bundles"></property>
+
+    <property 
+        name="com.fasterxml.jackson.core.jackson-core" 
+        location="/home/mishamba/.ivy2/cache/com.fasterxml.jackson.core/jackson-core/bundles"></property>
+
+    <property 
+        name="com.fasterxml.jackson.module-parameter-names" 
+        location="/home/mishamba/.ivy2/cache/com.fasterxml.jackson.module/jackson-module-parameter-names/bundles"></property>
+
+    <property 
+        name="com.fasterxml.jackson.module-java8" 
+        location="/home/mishamba/.ivy2/cache/com.fasterxml.jackson.module/jackson-modules-java8"></property>
+            
+    <property 
+        name="com.google.protobuf-bom" 
+        location="/home/mishamba/.ivy2/cache/com.google.protobuf/protobuf-bom"></property>
+
+    <property 
+        name="com.google.protobuf-java" 
+        location="/home/mishamba/.ivy2/cache/com.google.protobuf/protobuf-java/bundles"></property>
+
+    <property 
+        name="com.google.protobuf-parent" 
+        location="/home/mishamba/.ivy2/cache/com.google.protobuf/protobuf-parent"></property>
+
+    <property 
+        name="com.h2database" 
+        location="/home/mishamba/.ivy2/cache/com.h2database/h2/jars"></property>
+
+    <property 
+        name="com.jayway.jsonpath" 
+        location="/home/mishamba/.ivy2/cache/com.jayway.jsonpath/json-path/jars"></property>
+
+    <property 
+        name="com.sun.istack-commons-runtime" 
+        location="/home/mishamba/.ivy2/cache/com.sun.istack/istack-commons-runtime/jars"></property>
+
+    <property 
+        name="com.sun.xml.bind" 
+        location="/home/mishamba/.ivy2/cache/com.sun.istack/istack-commons-runtime/jars"></property>
+
+    <property 
+        name="com.sun.xml.fastinfoset.FastInfoset" 
+        location="/home/mishamba/.ivy2/cache/com.sun.xml.fastinfoset/FastInfoset/jars"></property>
+
+    <property 
+        name="com.sun.xml.fastinfoset.fastinfoset-project" 
+        location="/home/mishamba/.ivy2/cache/com.sun.xml.fastinfoset/fastinfosetproject"></property>
+
+    <property 
+        name="com.vaadin.external.google" 
+        location="/home/mishamba/.ivy2/cache/com.vaadin.external.google/android-json/jars"></property>
+
+    <property 
+        name="com.zaxxer" 
+        location="/home/mishamba/.ivy2/cache/com.zaxxer/HikariCP/bundles"></property>
+
+    <property 
+        name="io.projectreactor" 
+        location="/home/mishamba/.ivy2/cache/io.projectreactor/reactor-bom"></property>
+
+    <property 
+        name="jakarta.activation" 
+        location="/home/mishamba/.ivy2/cache/jakarta.activation/jakarta.activation-api/jars"></property>
+
+    <property 
+        name="jakarta.annotation.ca-parent" 
+        location="/home/mishamba/.ivy2/cache/jakarta.annotation/ca-parent"></property>
+
+    <property 
+        name="jakarta.annonation-api" 
+        location="/home/mishamba/.ivy2/cache/jakarta.annotation/jakarta.annotation-api/jars"></property>
+
+    <property 
+        name="jakarta.persistence" 
+        location="/home/mishamba/.ivy2/cache/jakarta.persistence/jakarta.persistence-api/jars"></property>
+
+    <property 
+        name="jakarta.transaction" 
+        location="/home/mishamba/.ivy2/cache/jakarta.transaction/jakarta.transaction-api/jars"></property>
+
+    <property 
+        name="jakarta.xml.bind-api" 
+        location="/home/mishamba/.ivy2/cache/jakarta.xml.bind/jakarta.xml.bind-api/jars"></property>
+
+    <property 
+        name="javax.activation" 
+        location="/home/mishamba/.ivy2/cache/javax.activation/javax.activation-api/jars"></property>
+
+    <property 
+        name="javax.persistence-api" 
+        location="/home/mishamba/.ivy2/cache/javax.persistence/javax.persistence-api/jars"></property>
+
+    <property 
+        name="javax.xml.bind.jaxb-api" 
+        location="/home/mishamba/.ivy2/cache/javax.xml.bind/jaxb-api/jars"></property>
+
+    <property 
+        name="mysql" 
+        location="/home/mishamba/.ivy2/cache/mysql/mysql-connector-java/jars"></property>
+
+    <property 
+        name="net.bytebuddy.byte-buddy" 
+        location="/home/mishamba/.ivy2/cache/net.bytebuddy/byte-buddy/jars"></property>
+
+    <property 
+        name="net.bytebuddy.byte-buddy-agent" 
+        location="/home/mishamba/.ivy2/cache/net.bytebuddy/byte-buddy-agent/jars"></property>
+
+    <property 
+        name="net.minidev.accessors-smart" 
+        location="/home/mishamba/.ivy2/cache/net.minidev/accessors-smart/bundles"></property>
+
+    <property 
+        name="net.minidev.json-smart" 
+        location="/home/mishamba/.ivy2/cache/net.minidev/json-smart/bundles"></property>
+
+    <property 
+        name="org.glessfish" 
+        location="/home/mishamba/.ivy2/cache/org.glassfish/jakarta.el/jars"></property>
+
+    <property 
+        name="org.glassfish.jaxb.jaxb-runtime" 
+        location="/home/mishamba/.ivy2/cache/org.glassfish.jaxb/jaxb-runtime/jars"></property>
+
+    <property 
+        name="org.glassfish.jaxb.txw2" 
+        location="/home/mishamba/.ivy2/cache/org.glassfish.jaxb/txw2/jars"></property>
+
+    <property 
+        name="org.hamcrest.hamcrest" 
+        location="/home/mishamba/.ivy2/cache/org.hamcrest/hamcrest/jars"></property>
+
+    <property 
+        name="org.hamcrest.hamcrest-core" 
+        location="/home/mishamba/.ivy2/cache/org.hamcrest/hamcrest-core/jars"></property>
+
+    <property 
+        name="org.hamcrest.hamcrest-library" 
+        location="/home/mishamba/.ivy2/cache/org.hamcrest/hamcrest-library/jars"></property>
+
+    <property 
+        name="org.hibernate.hibernate-core" 
+        location="/home/mishamba/.ivy2/cache/org.hibernate/hibernate-core/jars"></property>
+
+    <property 
+        name="org.hibernate.hibernate-commons-annotations" 
+        location="/home/mishamba/.ivy2/cache/org.hibernate.common/hibernate-commons-annotations/jars"></property>
+
+    <property 
+        name="org.javassist" 
+        location="/home/mishamba/.ivy2/cache/org.javassist/javassist/bundles"></property>
+
+    <property 
+        name="org.jboss" 
+        location="/home/mishamba/.ivy2/cache/org.jboss/jandex/bundles"></property>
+
+    <property 
+        name="org.jboss.logging.jboss-logging" 
+        location="/home/mishamba/.ivy2/cache/org.jboss.logging/jboss-logging/jars"></property>
+
+    <property 
+        name="org.jboss.spec.javax.transaction" 
+        location="/home/mishamba/.ivy2/cache/org.jboss.spec.javax.transaction/jboss-transaction-api_1.2_spec/jars"></property>
+
+    <property 
+        name="org.junit.jupiter.junit.jupiter" 
+        location="/home/mishamba/.ivy2/cache/org.junit.jupiter/junit-jupiter/jars"></property>
+
+    <property 
+        name="org.junit.jupiter.junit-jupiter-api" 
+        location="/home/mishamba/.ivy2/cache/org.junit.jupiter/junit-jupiter-api/jars"></property>
+
+    <property 
+        name="org.junit.jupier.junit-jupiter-engine" 
+        location="/home/mishamba/.ivy2/cache/org.junit.jupiter/junit-jupiter-engine/jars"></property>
+
+    <property 
+        name="org.junit.jupiter.junit-jupiter-params" 
+        location="/home/mishamba/.ivy2/cache/org.junit.jupiter/junit-jupiter-params/jars"></property>
+
+    <property 
+        name="org.junit.platform.junit-platform-commons" 
+        location="/home/mishamba/.ivy2/cache/org.junit.platform/junit-platform-commons/jars"></property>
+
+    <property 
+        name="org.junit.platform.junit-platform-engine" 
+        location="/home/mishamba/.ivy2/cache/org.junit.platform/junit-platform-engine/jars"></property>
+
+    <property 
+        name="org.jvnet.staxex" 
+        location="/home/mishamba/.ivy2/cache/org.jvnet.staxex/stax-ex/jars"></property>
+
+    <property 
+        name="org.mockito.mockito-core" 
+        location="/home/mishamba/.ivy2/cache/org.mockito/mockito-core/jars"></property>
+
+    <property 
+        name="org.mockito.mockito-junit-jupiter" 
+        location="/home/mishamba/.ivy2/cache/org.mockito/mockito-junit-jupiter/jars"></property>
+
+    <property 
+        name="org.objenesis.objenesis" 
+        location="/home/mishamba/.ivy2/cache/org.objenesis/objenesis/jars"></property>
+
+    <property 
+        name="org.opentest4j" 
+        location="/home/mishamba/.ivy2/cache/org.opentest4j/opentest4j/jars"></property>
+
+    <property 
+        name="org.ow2.asm.asm" 
+        location="/home/mishamba/.ivy2/cache/org.ow2.asm/asm/jars"></property>
+
+    <property 
+        name="org.skyscreamer" 
+        location="/home/mishamba/.ivy2/cache/org.skyscreamer/jsonassert/jars"></property>
+
+    <property 
+        name="org.slf4j.jul-to-slf4j" 
+        location="/home/mishamba/.ivy2/cache/org.slf4j/jul-to-slf4j/jars"></property>
+
+    <property 
+        name="org.slf4j.slf4j-api" 
+        location="/home/mishamba/.ivy2/cache/org.slf4j/slf4j-api/jars"></property>
+
+    <property 
+        name="org.springframework.spring-aop" 
+        location="/home/mishamba/.ivy2/cache/org.springframework/spring-aop/jars"></property>
+
+    <property 
+        name="org.springframework.spring-aspects" 
+        location="/home/mishamba/.ivy2/cache/org.springframework/spring-aspects/jars"></property>
+
+    <property 
+        name="org.springframework.spring-beans" 
+        location="/home/mishamba/.ivy2/cache/org.springframework/spring-beans/jars"></property>
+
+    <property 
+        name="org.springframework.spring-context" 
+        location="/home/mishamba/.ivy2/cache/org.springframework/spring-context/jars"></property>
+
+    <property 
+        name="org.springframework.spring-core" 
+        location="/home/mishamba/.ivy2/cache/org.springframework/spring-core/jars"></property>
+
+    <property 
+        name="org.springframework.spring-expression" 
+        location="/home/mishamba/.ivy2/cache/org.springframework/spring-expression/jars"></property>
+
+    <property 
+        name="org.springframework.spring-jcl" 
+        location="/home/mishamba/.ivy2/cache/org.springframework/spring-jcl/jars"></property>
+
+    <property 
+        name="org.springframework.spring-jdbc" 
+        location="/home/mishamba/.ivy2/cache/org.springframework/spring-jdbc/jars"></property>
+
+    <property 
+        name="org.springframework.spring-orm" 
+        location="/home/mishamba/.ivy2/cache/org.springframework/spring-orm/jars"></property>
+
+    <property 
+        name="org.springframework.spring-test" 
+        location="/home/mishamba/.ivy2/cache/org.springframework/spring-test/jars"></property>
+
+    <property 
+        name="org.springframework.spring-tx" 
+        location="/home/mishamba/.ivy2/cache/org.springframework/spring-tx/jars"></property>
+
+    <property 
+        name="org.springframework.spring-web" 
+        location="/home/mishamba/.ivy2/cache/org.springframework/spring-web/jars"></property>
+
+    <property 
+        name="org.springframework.spring-webmvc" 
+        location="/home/mishamba/.ivy2/cache/org.springframework/spring-webmvc/jars"></property>
+
+    <property 
+        name="org.springframework.data.spring-data-commons" 
+        location="/home/mishamba/.ivy2/cache/org.springframework/spring-data-commons/jars"></property>
+
+    <property 
+        name="org.springframework.data.spring-data-jpa" 
+        location="/home/mishamba/.ivy2/cache/org.springframework/spring-data-jpa/jars"></property>
+
+    <property 
+        name="org.xmlunit" 
+        location="/home/mishamba/.ivy2/cache/org.xmlunit/xmlunit-core/jars"></property>
+
+    <property 
+        name="org.yaml.snakeyaml" 
+        location="/home/mishamba/.ivy2/cache/org.yaml/snakeyaml/bundles"></property>
+
+	<target name="mkdir">
+		<mkdir dir="${classes}"/>
+	</target>
+	
+	<target name="clean">
+		<delete dir="${build}"></delete>
+	</target>
+
+	<path id="ivy.lib.path">
+	    <fileset dir="${user.home}/Downloads/apache-ivy-2.5.0" includes="*.jar"/>
+	</path>
+	<taskdef resource="org/apache/ivy/ant/antlib.xml" uri="antlib:org.apache.ivy.ant" classpathref="ivy.lib.path"/>
+	<available classname="org.apache.ivy.Main" property="ivy.installed"/> 
+	
+	<path id="classpath">
+		<fileset dir="${junit}">
+			<include name="*.jar"/>
+		</fileset>
+		
+        <fileset dir="${org.apache.tomcat.embed.core}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${org.apache.tomcat.embed.websocket}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${org.apache.loggin.log4j}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${org.apiguardian}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${org.aspectj}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${org.assetj}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${org.dom4j}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${com.fasterxml}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${com.fasterxml.jackson}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${com.fasterxml.jackson.datatype.jdk}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${com.fasterxml.jackson.datatype.jsr}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${com.fasterxml.jackson.datatype.jsr}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${com.fasterxml.jackson.core.jackson-annotations}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${com.fasterxml.jackson.core.jackson-core}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${com.fasterxml.jackson.module-parameter-names}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${com.fasterxml.jackson.module-java8}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${com.google.protobug-bom}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${com.google.protobug-java}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${com.google.protobug-parent}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${com.h2database}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${com.jayway.jsonpath}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${com.sun.activation}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${com.sun.istack-commons-runtime}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${com.sun.xml.bind}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${com.sun.xml.bind}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${com.sun.xml.fastinfoset.FastInfoset}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${com.sun.xml.fastinfoset.fastinfoset-project}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${com.vaadin.external.google}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${com.zaxxer}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${io.projectreactor}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${jakarta.activation}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${jakarta.annotation.ca-parent}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${jakarta.annotation-api}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${jakarta.persistence}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${jakarta.transaction}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${jakarta.xml.bind-api}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${jakarta.xml.bind-api}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${javax.activation}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${javax.persistence-api}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${javax.xml.bind.jaxb-api}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${mysql}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${net.bytebuddy.byte-buddy}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${net.bytebuddy.byte-buddy-agent}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${net.minidev.accessors-smart}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${net.minidev.json-smart}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${org.glessfish}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${org.glessfish.jaxb.jaxb-runtime}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${org.glessfish.jaxb.txw2}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${org.hamcrest.hamcrest}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${org.hamcrest.hamcrest-core}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${org.hamcrest.hamcrest-library}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${org.hibernate.hibernate-core}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${org.hibernate.hibernate-core-annotations}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${org.javassist}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${org.jboss}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${org.jboss.logging.jboss-logging}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${org.jboss.spec.javax.transaction}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${org.junit.jupiter.junit-jupiter-api}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${org.junit.jupiter.junit-jupiter-engine}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${org.junit.jupiter.junit-jupiter-params}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${org.junit.jupiter.junit-platform-commons}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${org.junit.jupiter.junit-platform-engine}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${org.jvnet.staxex}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${org.mockito.mockito-core}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${org.mockito.mockito-junit-jupiter}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${org.objenesis.objenesis}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${org.objenesis.objenesis}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${org.opentest4j}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${org.ow2.asm.asm}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${org.skyscreamer}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${org.slf4j.jul-to-slf4j}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${org.slf4j.slf4j-api}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${org.springframework.spring-aop}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${org.springframework.spring-aspects}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${org.springframework.spring-beans}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${org.springframework.spring-context}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${org.springframework.spring-core}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${org.springframework.spring-expression}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${org.springframework.spring-jcl}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${org.springframework.spring-jdbc}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${org.springframework.spring-orm}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${org.springframework.spring-test}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${org.springframework.spring-tx}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${org.springframework.spring-web}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${org.springframework.spring-webmvc}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${org.springframework.spring-data-commons}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${org.springframework.spring-data-jpa}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${org.xmlunit}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${org.yaml.snakeyaml}">
+            <include name="*.jar"/>
+        </fileset>
+
+		<pathelement path="${src}"/>
+		<pathelement path="${webapp}"/>
+	</path>
+	
+	<target name="resolve">
+		<ivy:cachepath pathid="compile.path">
+			<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-test -->
+			<dependency org="org.springframework.boot" name="spring-boot-starter-test" rev="2.4.3"/>
+			<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-web -->
+			<dependency org="org.springframework.boot" name="spring-boot-starter-web" rev="2.4.3"/>
+			<!-- https://mvnrepository.com/artifact/com.h2database/h2 -->
+			<dependency org="com.h2database" name="h2" rev="1.4.200"/>
+			<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-jpa -->
+			<dependency org="org.springframework.boot" name="spring-boot-starter-data-jpa" rev="2.4.3"/>
+			<!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-core -->
+			<dependency org="org.hibernate" name="hibernate-core" rev="5.4.29.Final"/>
+			<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+			<dependency org="mysql" name="mysql-connector-java" rev="8.0.23"/>
+		</ivy:cachepath>
+	</target>
+</project>
