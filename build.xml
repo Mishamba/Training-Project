@@ -5,13 +5,16 @@
 	<property name="src" location="src"></property>
 	<property name="webapp" location="webapp"></property>
 
-	<property name="junit" location="/home/mishamba/.ivy2/cache/junit/junit/jars"></property>
+	<property 
+		name="junit" 
+		location="/home/mishamba/.ivy2/cache/junit/junit/jars"></property>
 
     <property 
         name="org.apache.tomcat.embed.core" 
         location="/home/mishamba/.ivy2/cache/org.apache.tomcat.embed/tomcat-embed-core/jars"></property>
+
     <property 
-        name="org.apache.tomcat.embaded.websocket" 
+        name="org.apache.tomcat.embed.websocket" 
         location="/home/mishamba/.ivy2/cache/org.apache.tomcat.embed/tomcat-embed-websocket/jars"></property>
 
     <property 
@@ -75,10 +78,6 @@
         location="/home/mishamba/.ivy2/cache/com.google.protobuf/protobuf-java/bundles"></property>
 
     <property 
-        name="com.google.protobuf-parent" 
-        location="/home/mishamba/.ivy2/cache/com.google.protobuf/protobuf-parent"></property>
-
-    <property 
         name="com.h2database" 
         location="/home/mishamba/.ivy2/cache/com.h2database/h2/jars"></property>
 
@@ -99,10 +98,6 @@
         location="/home/mishamba/.ivy2/cache/com.sun.xml.fastinfoset/FastInfoset/jars"></property>
 
     <property 
-        name="com.sun.xml.fastinfoset.fastinfoset-project" 
-        location="/home/mishamba/.ivy2/cache/com.sun.xml.fastinfoset/fastinfosetproject"></property>
-
-    <property 
         name="com.vaadin.external.google" 
         location="/home/mishamba/.ivy2/cache/com.vaadin.external.google/android-json/jars"></property>
 
@@ -111,19 +106,11 @@
         location="/home/mishamba/.ivy2/cache/com.zaxxer/HikariCP/bundles"></property>
 
     <property 
-        name="io.projectreactor" 
-        location="/home/mishamba/.ivy2/cache/io.projectreactor/reactor-bom"></property>
-
-    <property 
         name="jakarta.activation" 
         location="/home/mishamba/.ivy2/cache/jakarta.activation/jakarta.activation-api/jars"></property>
 
     <property 
-        name="jakarta.annotation.ca-parent" 
-        location="/home/mishamba/.ivy2/cache/jakarta.annotation/ca-parent"></property>
-
-    <property 
-        name="jakarta.annonation-api" 
+        name="jakarta.annotation-api" 
         location="/home/mishamba/.ivy2/cache/jakarta.annotation/jakarta.annotation-api/jars"></property>
 
     <property 
@@ -219,7 +206,7 @@
         location="/home/mishamba/.ivy2/cache/org.jboss.spec.javax.transaction/jboss-transaction-api_1.2_spec/jars"></property>
 
     <property 
-        name="org.junit.jupiter.junit.jupiter" 
+        name="org.junit.jupiter.junit-jupiter" 
         location="/home/mishamba/.ivy2/cache/org.junit.jupiter/junit-jupiter/jars"></property>
 
     <property 
@@ -227,7 +214,7 @@
         location="/home/mishamba/.ivy2/cache/org.junit.jupiter/junit-jupiter-api/jars"></property>
 
     <property 
-        name="org.junit.jupier.junit-jupiter-engine" 
+        name="org.junit.jupiter.junit-jupiter-engine" 
         location="/home/mishamba/.ivy2/cache/org.junit.jupiter/junit-jupiter-engine/jars"></property>
 
     <property 
@@ -332,11 +319,27 @@
 
     <property 
         name="org.springframework.data.spring-data-commons" 
-        location="/home/mishamba/.ivy2/cache/org.springframework/spring-data-commons/jars"></property>
+        location="/home/mishamba/.ivy2/cache/org.springframework.data/spring-data-commons/jars"></property>
 
     <property 
         name="org.springframework.data.spring-data-jpa" 
-        location="/home/mishamba/.ivy2/cache/org.springframework/spring-data-jpa/jars"></property>
+        location="/home/mishamba/.ivy2/cache/org.springframework.data/spring-data-jpa/jars"></property>
+
+    <property 
+        name="org.springframework.security.spring-security-config" 
+        location="/home/mishamba/.ivy2/cache/org.springframework.security/spring-security-config/jars"></property>
+
+    <property 
+        name="org.springframework.security.spring-security-config" 
+        location="/home/mishamba/.ivy2/cache/org.springframework.security/spring-security-config/jars"></property>
+
+    <property 
+        name="org.springframework.security.spring-security-core" 
+        location="/home/mishamba/.ivy2/cache/org.springframework.security/spring-security-core/jars"></property>
+
+    <property 
+        name="org.springframework.security.spring-security-web" 
+        location="/home/mishamba/.ivy2/cache/org.springframework.security/spring-security-web/jars"></property>
 
     <property 
         name="org.xmlunit" 
@@ -385,7 +388,7 @@
             <include name="*.jar"/>
         </fileset>
 
-        <fileset dir="${org.assetj}">
+        <fileset dir="${org.assertj}">
             <include name="*.jar"/>
         </fileset>
 
@@ -429,15 +432,11 @@
             <include name="*.jar"/>
         </fileset>
 
-        <fileset dir="${com.google.protobug-bom}">
+        <fileset dir="${com.google.protobuf-bom}">
             <include name="*.jar"/>
         </fileset>
 
-        <fileset dir="${com.google.protobug-java}">
-            <include name="*.jar"/>
-        </fileset>
-
-        <fileset dir="${com.google.protobug-parent}">
+        <fileset dir="${com.google.protobuf-java}">
             <include name="*.jar"/>
         </fileset>
 
@@ -446,10 +445,6 @@
         </fileset>
 
         <fileset dir="${com.jayway.jsonpath}">
-            <include name="*.jar"/>
-        </fileset>
-
-        <fileset dir="${com.sun.activation}">
             <include name="*.jar"/>
         </fileset>
 
@@ -469,10 +464,6 @@
             <include name="*.jar"/>
         </fileset>
 
-        <fileset dir="${com.sun.xml.fastinfoset.fastinfoset-project}">
-            <include name="*.jar"/>
-        </fileset>
-
         <fileset dir="${com.vaadin.external.google}">
             <include name="*.jar"/>
         </fileset>
@@ -481,15 +472,7 @@
             <include name="*.jar"/>
         </fileset>
 
-        <fileset dir="${io.projectreactor}">
-            <include name="*.jar"/>
-        </fileset>
-
         <fileset dir="${jakarta.activation}">
-            <include name="*.jar"/>
-        </fileset>
-
-        <fileset dir="${jakarta.annotation.ca-parent}">
             <include name="*.jar"/>
         </fileset>
 
@@ -549,11 +532,11 @@
             <include name="*.jar"/>
         </fileset>
 
-        <fileset dir="${org.glessfish.jaxb.jaxb-runtime}">
+        <fileset dir="${org.glassfish.jaxb.jaxb-runtime}">
             <include name="*.jar"/>
         </fileset>
 
-        <fileset dir="${org.glessfish.jaxb.txw2}">
+        <fileset dir="${org.glassfish.jaxb.txw2}">
             <include name="*.jar"/>
         </fileset>
 
@@ -573,7 +556,7 @@
             <include name="*.jar"/>
         </fileset>
 
-        <fileset dir="${org.hibernate.hibernate-core-annotations}">
+        <fileset dir="${org.hibernate.hibernate-commons-annotations}">
             <include name="*.jar"/>
         </fileset>
 
@@ -593,6 +576,10 @@
             <include name="*.jar"/>
         </fileset>
 
+        <fileset dir="${org.junit.jupiter.junit-jupiter}">
+            <include name="*.jar"/>
+        </fileset>
+
         <fileset dir="${org.junit.jupiter.junit-jupiter-api}">
             <include name="*.jar"/>
         </fileset>
@@ -605,14 +592,14 @@
             <include name="*.jar"/>
         </fileset>
 
-        <fileset dir="${org.junit.jupiter.junit-platform-commons}">
+        <fileset dir="${org.junit.platform.junit-platform-commons}">
             <include name="*.jar"/>
         </fileset>
 
-        <fileset dir="${org.junit.jupiter.junit-platform-engine}">
+        <fileset dir="${org.junit.platform.junit-platform-engine}">
             <include name="*.jar"/>
         </fileset>
-
+            
         <fileset dir="${org.jvnet.staxex}">
             <include name="*.jar"/>
         </fileset>
@@ -705,11 +692,23 @@
             <include name="*.jar"/>
         </fileset>
 
-        <fileset dir="${org.springframework.spring-data-commons}">
+        <fileset dir="${org.springframework.data.spring-data-commons}">
             <include name="*.jar"/>
         </fileset>
 
-        <fileset dir="${org.springframework.spring-data-jpa}">
+        <fileset dir="${org.springframework.data.spring-data-jpa}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${org.springframework.security.spring-security-config}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${org.springframework.security.spring-security-core}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${org.springframework.security.spring-security-web}">
             <include name="*.jar"/>
         </fileset>
 
@@ -739,13 +738,15 @@
 			<dependency org="org.hibernate" name="hibernate-core" rev="5.4.29.Final"/>
 			<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
 			<dependency org="mysql" name="mysql-connector-java" rev="8.0.23"/>
+			<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-security -->
+			<dependency org="org.springframework.boot" name="spring-boot-starter-security" rev="2.4.3"/>
 		</ivy:cachepath>
 	</target>
 	
 	<target name="compile" depends="mkdir, resolve">
-		<javac destdir="${classes}" includeruntime="false">
+		<javac destdir="${classes}" includeantruntime="false">
 			<src path="${src}"/>
-			<classpath refid="${compile-classpath}"/>
+			<classpath refid="compile-classpath"/>
 		</javac>
 	</target>
 </project>
