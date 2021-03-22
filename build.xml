@@ -5,6 +5,337 @@
 	<property name="src" location="src"></property>
 	<property name="webapp" location="webapp"></property>
 
+	<!-- WINDOWS DEPENDENCIES PATHS -->
+    <property 
+        name="org.apache.tomcat.embed.core-windows" 
+        location="C:\Users\Mihail_Nenahov\.ivy2\cache\org.apache.tomcat.embed\tomcat-embed-core\jars"></property>
+
+    <property 
+        name="org.apache.tomcat.embed.websocket-windows" 
+        location="C:\Users\Mihail_Nenahov\.ivy2\cache\org.apache.tomcat.embed\tomcat-embed-websocket\jars"></property>
+
+    <property 
+        name="org.apache.loggin.log4j-windows" 
+        location="C:\Users\Mihail_Nenahov\.ivy2\cache\org.apache.logging.log4j\log4j-to-slf4j\jars"></property>
+
+    <property 
+        name="org.apiguardian-windows" 
+        location="C:\Users\Mihail_Nenahov\.ivy2\cache\org.apiguardian\apiguardian-api\jars"></property>
+
+    <property 
+        name="org.aspectj-windows" 
+        location="C:\Users\Mihail_Nenahov\.ivy2\cache\org.aspectj\aspectjweaver\jars"></property>
+
+    <property 
+        name="org.assertj-windows" 
+        location="C:\Users\Mihail_Nenahov\.ivy2\cache\org.assertj\assertj-core\jars"></property>
+
+    <property 
+        name="org.dom4j-windows" 
+        location="C:\Users\Mihail_Nenahov\.ivy2\cache\org.assertj\assertj-core\jars"></property>
+
+    <property 
+        name="com.fasterxml-windows" 
+        location="C:\Users\Mihail_Nenahov\.ivy2\cache\com.fasterxml\classmate\bundles"></property>
+
+    <property 
+        name="com.fasterxml.jackson-windows" 
+        location="C:\Users\Mihail_Nenahov\.ivy2\cache\com.fasterxml.jackson"></property>
+
+    <property 
+        name="com.fasterxml.jackson.datatype.jdk-windows" 
+        location="C:\Users\Mihail_Nenahov\.ivy2\cache\com.fasterxml.jackson.datatype\jackson-datatype-jdk8\bundles"></property>
+
+    <property 
+        name="com.fasterxml.jackson.datatype.jsr-windows" 
+        location="C:\Users\Mihail_Nenahov\.ivy2\cache\com.fasterxml.jackson.datatype\jackson-datatype-jsr310\bundles"></property>
+            
+    <property 
+        name="com.fasterxml.jackson.core.jackson-annotations-windows" 
+        location="C:\Users\Mihail_Nenahov\.ivy2\cache\com.fasterxml.jackson.core\jackson-annotations\bundles"></property>
+
+    <property 
+        name="com.fasterxml.jackson.core.jackson-core-windows" 
+        location="C:\Users\Mihail_Nenahov\.ivy2\cache\com.fasterxml.jackson.core\jackson-core\bundles"></property>
+
+    <property 
+        name="com.fasterxml.jackson.module-parameter-names-windows" 
+        location="C:\Users\Mihail_Nenahov\.ivy2\cache\com.fasterxml.jackson.module\jackson-module-parameter-names\bundles"></property>
+
+    <property 
+        name="com.fasterxml.jackson.module-java8-windows" 
+        location="C:\Users\Mihail_Nenahov\.ivy2\cache\com.fasterxml.jackson.module\jackson-modules-java8"></property>
+            
+    <property 
+        name="com.google.protobuf-bom-windows" 
+        location="C:\Users\Mihail_Nenahov\.ivy2\cache\com.google.protobuf\protobuf-bom"></property>
+
+    <property 
+        name="com.google.protobuf-java-windows" 
+        location="C:\Users\Mihail_Nenahov\.ivy2\cache\com.google.protobuf\protobuf-java\bundles"></property>
+
+    <property 
+        name="com.h2database-windows" 
+        location="C:\Users\Mihail_Nenahov\.ivy2\cache\com.h2database\h2\jars"></property>
+
+    <property 
+        name="com.jayway.jsonpath-windows" 
+        location="C:\Users\Mihail_Nenahov\.ivy2\cache\com.jayway.jsonpath\json-path\jars"></property>
+
+    <property 
+        name="com.sun.istack-commons-runtime-windows" 
+        location="C:\Users\Mihail_Nenahov\.ivy2\cache\com.sun.istack\istack-commons-runtime\jars"></property>
+
+    <property 
+        name="com.sun.xml.bind-windows" 
+        location="C:\Users\Mihail_Nenahov\.ivy2\cache\com.sun.istack\istack-commons-runtime\jars"></property>
+
+    <property 
+        name="com.sun.xml.fastinfoset.FastInfoset-windows" 
+        location="C:\Users\Mihail_Nenahov\.ivy2\cache\com.sun.xml.fastinfoset\FastInfoset\jars"></property>
+
+    <property 
+        name="com.vaadin.external.google-windows" 
+        location="C:\Users\Mihail_Nenahov\.ivy2\cache\com.vaadin.external.google\android-json\jars"></property>
+
+    <property 
+        name="com.zaxxer-windows" 
+        location="C:\Users\Mihail_Nenahov\.ivy2\cache\com.zaxxer\HikariCP\bundles"></property>
+
+    <property 
+        name="jakarta.activation-windows" 
+        location="C:\Users\Mihail_Nenahov\.ivy2\cache\jakarta.activation\jakarta.activation-api\jars"></property>
+
+    <property 
+        name="jakarta.annotation-api-windows" 
+        location="C:\Users\Mihail_Nenahov\.ivy2\cache\jakarta.annotation\jakarta.annotation-api\jars"></property>
+
+    <property 
+        name="jakarta.persistence-windows" 
+        location="C:\Users\Mihail_Nenahov\.ivy2\cache\jakarta.persistence\jakarta.persistence-api\jars"></property>
+
+    <property 
+        name="jakarta.transaction-windows" 
+        location="C:\Users\Mihail_Nenahov\.ivy2\cache\jakarta.transaction\jakarta.transaction-api\jars"></property>
+
+    <property 
+        name="jakarta.xml.bind-api-windows" 
+        location="C:\Users\Mihail_Nenahov\.ivy2\cache\jakarta.xml.bind\jakarta.xml.bind-api\jars"></property>
+
+    <property 
+        name="javax.activation-windows" 
+        location="C:\Users\Mihail_Nenahov\.ivy2\cache\javax.activation\javax.activation-api\jars"></property>
+
+    <property 
+        name="javax.persistence-api-windows" 
+        location="C:\Users\Mihail_Nenahov\.ivy2\cache\javax.persistence\javax.persistence-api\jars"></property>
+
+    <property 
+        name="javax.xml.bind.jaxb-api-windows" 
+        location="C:\Users\Mihail_Nenahov\.ivy2\cache\javax.xml.bind\jaxb-api\jars"></property>
+
+    <property 
+        name="mysql-windows" 
+        location="C:\Users\Mihail_Nenahov\.ivy2\cache\mysql\mysql-connector-java\jars"></property>
+
+    <property 
+        name="net.bytebuddy.byte-buddy-agent-windows" 
+        location="C:\Users\Mihail_Nenahov\.ivy2\cache\net.bytebuddy\byte-buddy-agent\jars"></property>
+
+    <property 
+        name="net.minidev.accessors-smart-windows" 
+        location="C:\Users\Mihail_Nenahov\.ivy2\cache\net.minidev\accessors-smart\bundles"></property>
+
+    <property 
+        name="net.minidev.json-smart-windows" 
+        location="C:\Users\Mihail_Nenahov\.ivy2\cache\net.minidev\json-smart\bundles"></property>
+
+    <property 
+        name="org.glessfish-windows" 
+        location="C:\Users\Mihail_Nenahov\.ivy2\cache\org.glassfish\jakarta.el\jars"></property>
+
+    <property 
+        name="org.glassfish.jaxb.jaxb-runtime-windows" 
+        location="C:\Users\Mihail_Nenahov\.ivy2\cache\org.glassfish.jaxb\jaxb-runtime\jars"></property>
+
+    <property 
+        name="org.glassfish.jaxb.txw2-windows" 
+        location="C:\Users\Mihail_Nenahov\.ivy2\cache\org.glassfish.jaxb\txw2\jars"></property>
+
+    <property 
+        name="org.hamcrest.hamcrest-windows" 
+        location="C:\Users\Mihail_Nenahov\.ivy2\cache\org.hamcrest\hamcrest\jars"></property>
+
+    <property 
+        name="org.hibernate.hibernate-core-windows" 
+        location="C:\Users\Mihail_Nenahov\.ivy2\cache\org.hibernate\hibernate-core\jars"></property>
+
+    <property 
+        name="org.hibernate.hibernate-commons-annotations-windows" 
+        location="C:\Users\Mihail_Nenahov\.ivy2\cache\org.hibernate.common\hibernate-commons-annotations\jars"></property>
+
+    <property 
+        name="org.javassist-windows" 
+        location="C:\Users\Mihail_Nenahov\.ivy2\cache\org.javassist\javassist\bundles"></property>
+
+    <property 
+        name="org.jboss-windows" 
+        location="C:\Users\Mihail_Nenahov\.ivy2\cache\org.jboss\jandex\bundles"></property>
+
+    <property 
+        name="org.jboss.logging.jboss-logging-windows" 
+        location="C:\Users\Mihail_Nenahov\.ivy2\cache\org.jboss.logging\jboss-logging\jars"></property>
+
+    <property 
+        name="org.jboss.spec.javax.transaction-windows" 
+        location="C:\Users\Mihail_Nenahov\.ivy2\cache\org.jboss.spec.javax.transaction\jboss-transaction-api_1.2_spec\jars"></property>
+
+    <property 
+        name="org.junit.jupiter.junit-jupiter-windows" 
+        location="C:\Users\Mihail_Nenahov\.ivy2\cache\org.junit.jupiter\junit-jupiter\jars"></property>
+
+    <property 
+        name="org.junit.jupiter.junit-jupiter-api-windows" 
+        location="C:\Users\Mihail_Nenahov\.ivy2\cache\org.junit.jupiter\junit-jupiter-api\jars"></property>
+
+    <property 
+        name="org.junit.jupiter.junit-jupiter-engine-windows" 
+        location="C:\Users\Mihail_Nenahov\.ivy2\cache\org.junit.jupiter\junit-jupiter-engine\jars"></property>
+
+    <property 
+        name="org.junit.jupiter.junit-jupiter-params-windows" 
+        location="C:\Users\Mihail_Nenahov\.ivy2\cache\org.junit.jupiter\junit-jupiter-params\jars"></property>
+
+    <property 
+        name="org.junit.platform.junit-platform-commons-windows" 
+        location="C:\Users\Mihail_Nenahov\.ivy2\cache\org.junit.platform\junit-platform-commons\jars"></property>
+
+    <property 
+        name="org.junit.platform.junit-platform-engine-windows" 
+        location="C:\Users\Mihail_Nenahov\.ivy2\cache\org.junit.platform\junit-platform-engine\jars"></property>
+
+    <property 
+        name="org.jvnet.staxex-windows" 
+        location="C:\Users\Mihail_Nenahov\.ivy2\cache\org.jvnet.staxex\stax-ex\jars"></property>
+
+    <property 
+        name="org.mockito.mockito-core-windows"
+        location="C:\Users\Mihail_Nenahov\.ivy2\cache\org.mockito\mockito-core\jars"></property>
+
+    <property 
+        name="org.mockito.mockito-junit-jupiter-windows" 
+        location="C:\Users\Mihail_Nenahov\.ivy2\cache\org.mockito\mockito-junit-jupiter\jars"></property>
+
+    <property 
+        name="org.objenesis.objenesis-windows" 
+        location="C:\Users\Mihail_Nenahov\.ivy2\cache\org.objenesis\objenesis\jars"></property>
+
+    <property 
+        name="org.opentest4j-windows" 
+        location="C:\Users\Mihail_Nenahov\.ivy2\cache\org.opentest4j\opentest4j\jars"></property>
+
+    <property 
+        name="org.ow2.asm.asm-windows" 
+        location="C:\Users\Mihail_Nenahov\.ivy2\cache\org.ow2.asm\asm\jars"></property>
+
+    <property 
+        name="org.skyscreamer-windows" 
+        location="C:\Users\Mihail_Nenahov\.ivy2\cache\org.skyscreamer\jsonassert\jars"></property>
+
+    <property 
+        name="org.slf4j.jul-to-slf4j-windows" 
+        location="C:\Users\Mihail_Nenahov\.ivy2\cache\org.slf4j\jul-to-slf4j\jars"></property>
+
+    <property 
+        name="org.slf4j.slf4j-api-windows" 
+        location="C:\Users\Mihail_Nenahov\.ivy2\cache\org.slf4j\slf4j-api\jars"></property>
+
+    <property 
+        name="org.springframework.spring-aop-windows" 
+        location="C:\Users\Mihail_Nenahov\.ivy2\cache\org.springframework\spring-aop\jars"></property>
+
+    <property 
+        name="org.springframework.spring-aspects-windows" 
+        location="C:\Users\Mihail_Nenahov\.ivy2\cache\org.springframework\spring-aspects\jars"></property>
+
+    <property 
+        name="org.springframework.spring-beans-windows" 
+        location="C:\Users\Mihail_Nenahov\.ivy2\cache\org.springframework\spring-beans\jars"></property>
+
+    <property 
+        name="org.springframework.spring-context-windows" 
+        location="C:\Users\Mihail_Nenahov\.ivy2\cache\org.springframework\spring-context\jars"></property>
+
+    <property 
+        name="org.springframework.spring-core-windows" 
+        location="C:\Users\Mihail_Nenahov\.ivy2\cache\org.springframework\spring-core\jars"></property>
+
+    <property 
+        name="org.springframework.spring-expression-windows" 
+        location="C:\Users\Mihail_Nenahov\.ivy2\cache\org.springframework\spring-expression\jars"></property>
+
+    <property 
+        name="org.springframework.spring-jcl-windows" 
+        location="C:\Users\Mihail_Nenahov\.ivy2\cache\org.springframework\spring-jcl\jars"></property>
+
+    <property 
+        name="org.springframework.spring-jdbc-windows" 
+        location="C:\Users\Mihail_Nenahov\.ivy2\cache\org.springframework\spring-jdbc\jars"></property>
+
+    <property 
+        name="org.springframework.spring-orm-windows" 
+        location="C:\Users\Mihail_Nenahov\.ivy2\cache\org.springframework\spring-orm\jars"></property>
+
+    <property 
+        name="org.springframework.spring-test-windows" 
+        location="C:\Users\Mihail_Nenahov\.ivy2\cache\org.springframework\spring-test\jars"></property>
+
+    <property 
+        name="org.springframework.spring-tx-windows" 
+        location="C:\Users\Mihail_Nenahov\.ivy2\cache\org.springframework\spring-tx\jars"></property>
+
+    <property 
+        name="org.springframework.spring-web-windows" 
+        location="C:\Users\Mihail_Nenahov\.ivy2\cache\org.springframework\spring-web\jars"></property>
+
+    <property 
+        name="org.springframework.spring-webmvc-windows" 
+        location="C:\Users\Mihail_Nenahov\.ivy2\cache\org.springframework\spring-webmvc\jars"></property>
+
+    <property 
+        name="org.springframework.data.spring-data-commons-windows" 
+        location="C:\Users\Mihail_Nenahov\.ivy2\cache\org.springframework.data\spring-data-commons\jars"></property>
+
+    <property 
+        name="org.springframework.data.spring-data-jpa-windows" 
+        location="C:\Users\Mihail_Nenahov\.ivy2\cache\org.springframework.data\spring-data-jpa\jars"></property>
+		
+    <property 
+        name="org.springframework.security.spring-security-config-windows" 
+        location="C:\Users\Mihail_Nenahov\.ivy2\cache\org.springframework.security\spring-security-config\jars"></property>
+
+    <property 
+        name="org.springframework.security.spring-security-config-windows" 
+        location="C:\Users\Mihail_Nenahov\.ivy2\cache\org.springframework.security\spring-security-config\jars"></property>
+
+    <property 
+        name="org.springframework.security.spring-security-core-windows" 
+        location="C:\Users\Mihail_Nenahov\.ivy2\cache\org.springframework.security\spring-security-core\jars"></property>
+
+    <property 
+        name="org.springframework.security.spring-security-web-windows" 
+        location="C:\Users\Mihail_Nenahov\.ivy2\cache\org.springframework.security\spring-security-web\jars"></property>
+
+    <property 
+        name="org.xmlunit-windows" 
+        location="C:\Users\Mihail_Nenahov\.ivy2\cache\org.xmlunit\xmlunit-core\jars"></property>
+
+    <property 
+        name="org.yaml.snakeyaml-windows" 
+        location="C:\Users\Mihail_Nenahov/.ivy2/cache/org.yaml/snakeyaml/bundles"></property>
+
+
+	<!-- LINUX DEPENDENCIES PATHS -->
 	<property 
 		name="junit" 
 		location="/home/mishamba/.ivy2/cache/junit/junit/jars"></property>
@@ -354,8 +685,8 @@
 	</path>
 	<taskdef resource="org/apache/ivy/ant/antlib.xml" uri="antlib:org.apache.ivy.ant" classpathref="ivy.lib.path"/>
 	<available classname="org.apache.ivy.Main" property="ivy.installed"/> 
-	
-	<path id="default.classpath">
+
+	<path id="compile-classpath-linux">
 		<fileset dir="${junit}">
 			<include name="*.jar"/>
 		</fileset>
@@ -716,14 +1047,350 @@
 		<pathelement path="${webapp}"/>
 	</path>
 
-	<target name="mkdir">
-		<mkdir dir="${classes}"/>
-	</target>
-	
-	<target name="clean">
-		<delete dir="${build}"></delete>
-	</target>
+	<path id="compile-classpath-windows">
+        <fileset dir="${org.apache.tomcat.embed.core-windows}">
+            <include name="*.jar"/>
+        </fileset>
 
+        <fileset dir="${org.apache.tomcat.embed.websocket-windows}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${org.apache.loggin.log4j-windows}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${org.apiguardian-windows}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${org.aspectj-windows}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${org.assertj-windows}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${org.dom4j-windows}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${com.fasterxml-windows}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${com.fasterxml.jackson-windows}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${com.fasterxml.jackson.datatype.jdk-windows}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${com.fasterxml.jackson.datatype.jsr-windows}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${com.fasterxml.jackson.datatype.jsr-windows}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${com.fasterxml.jackson.core.jackson-annotations-windows}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${com.fasterxml.jackson.core.jackson-core-windows}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${com.fasterxml.jackson.module-parameter-names-windows}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${com.fasterxml.jackson.module-java8-windows}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${com.google.protobuf-bom-windows}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${com.google.protobuf-java-windows}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${com.h2database-windows}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${com.jayway.jsonpath-windows}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${com.sun.istack-commons-runtime-windows}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${com.sun.xml.bind-windows}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${com.sun.xml.bind-windows}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${com.sun.xml.fastinfoset.FastInfoset-windows}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${com.vaadin.external.google-windows}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${com.zaxxer-windows}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${jakarta.activation-windows}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${jakarta.annotation-api-windows}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${jakarta.persistence-windows}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${jakarta.transaction-windows}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${jakarta.xml.bind-api-windows}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${jakarta.xml.bind-api-windows}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${javax.activation-windows}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${javax.persistence-api-windows}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${javax.xml.bind.jaxb-api-windows}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${mysql-windows}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${net.bytebuddy.byte-buddy-agent-windows}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${net.minidev.accessors-smart-windows}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${net.minidev.json-smart-windows}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${org.glessfish-windows}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${org.glassfish.jaxb.jaxb-runtime-windows}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${org.glassfish.jaxb.txw2-windows}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${org.hamcrest.hamcrest-windows}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${org.hibernate.hibernate-core-windows}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${org.hibernate.hibernate-commons-annotations-windows}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${org.javassist-windows}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${org.jboss-windows}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${org.jboss.logging.jboss-logging-windows}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${org.jboss.spec.javax.transaction-windows}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${org.junit.jupiter.junit-jupiter-windows}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${org.junit.jupiter.junit-jupiter-api-windows}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${org.junit.jupiter.junit-jupiter-engine-windows}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${org.junit.jupiter.junit-jupiter-params-windows}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${org.junit.platform.junit-platform-commons-windows}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${org.junit.platform.junit-platform-engine-windows}">
+            <include name="*.jar"/>
+        </fileset>
+            
+        <fileset dir="${org.jvnet.staxex-windows}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${org.mockito.mockito-core-windows}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${org.mockito.mockito-junit-jupiter-windows}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${org.objenesis.objenesis-windows}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${org.objenesis.objenesis-windows}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${org.opentest4j-windows}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${org.ow2.asm.asm-windows}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${org.skyscreamer-windows}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${org.slf4j.jul-to-slf4j-windows}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${org.slf4j.slf4j-api-windows}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${org.springframework.spring-aop-windows}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${org.springframework.spring-aspects-windows}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${org.springframework.spring-beans-windows}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${org.springframework.spring-context-windows}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${org.springframework.spring-core-windows}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${org.springframework.spring-expression-windows}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${org.springframework.spring-jcl-windows}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${org.springframework.spring-jdbc-windows}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${org.springframework.spring-orm-windows}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${org.springframework.spring-test-windows}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${org.springframework.spring-tx-windows}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${org.springframework.spring-web-windows}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${org.springframework.spring-webmvc-windows}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${org.springframework.data.spring-data-commons-windows}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${org.springframework.data.spring-data-jpa-windows}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${org.springframework.security.spring-security-config-windows}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${org.springframework.security.spring-security-core-windows}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${org.springframework.security.spring-security-web-windows}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${org.xmlunit-windows}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${org.yaml.snakeyaml-windows}">
+            <include name="*.jar"/>
+        </fileset>
+
+		<pathelement path="${src}"/>
+		<pathelement path="${webapp}"/>
+	</path>
 	
 	<target name="resolve">
 		<ivy:cachepath pathid="compile.path">
@@ -744,10 +1411,25 @@
 		</ivy:cachepath>
 	</target>
 	
-	<target name="compile" depends="mkdir, resolve">
+	<target name="compile-linux" depends="mkdir, resolve">
 		<javac destdir="${classes}" includeantruntime="false">
 			<src path="${src}"/>
-			<classpath refid="default.classpath"/>
+			<classpath refid="compile-classpath-linux"/>
 		</javac>
+	</target>
+
+	<target name="compile-windows" depends="mkdir, resolve">
+		<javac destdir="${classes}" includeantruntime="false">
+			<src path="${src}"/>
+			<classpath refid="compile-classpath-windows"/>
+		</javac>
+	</target>
+
+	<target name="mkdir">
+		<mkdir dir="${classes}"/>
+	</target>
+	
+	<target name="clean">
+		<delete dir="${build}"></delete>
 	</target>
 </project>
