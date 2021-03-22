@@ -349,21 +349,13 @@
         name="org.yaml.snakeyaml" 
         location="/home/mishamba/.ivy2/cache/org.yaml/snakeyaml/bundles"></property>
 
-	<target name="mkdir">
-		<mkdir dir="${classes}"/>
-	</target>
-	
-	<target name="clean">
-		<delete dir="${build}"></delete>
-	</target>
-
 	<path id="ivy.lib.path">
 	    <fileset dir="${user.home}/Downloads/apache-ivy-2.5.0" includes="*.jar"/>
 	</path>
 	<taskdef resource="org/apache/ivy/ant/antlib.xml" uri="antlib:org.apache.ivy.ant" classpathref="ivy.lib.path"/>
 	<available classname="org.apache.ivy.Main" property="ivy.installed"/> 
 	
-	<path id="compile-classpath">
+	<path id="default.classpath">
 		<fileset dir="${junit}">
 			<include name="*.jar"/>
 		</fileset>
@@ -723,6 +715,15 @@
 		<pathelement path="${src}"/>
 		<pathelement path="${webapp}"/>
 	</path>
+
+	<target name="mkdir">
+		<mkdir dir="${classes}"/>
+	</target>
+	
+	<target name="clean">
+		<delete dir="${build}"></delete>
+	</target>
+
 	
 	<target name="resolve">
 		<ivy:cachepath pathid="compile.path">
@@ -746,7 +747,7 @@
 	<target name="compile" depends="mkdir, resolve">
 		<javac destdir="${classes}" includeantruntime="false">
 			<src path="${src}"/>
-			<classpath refid="compile-classpath"/>
+			<classpath refid="default.classpath"/>
 		</javac>
 	</target>
 </project>
