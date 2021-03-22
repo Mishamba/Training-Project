@@ -149,23 +149,18 @@ function showFiles() {
 
     removeAllChild(table);
 
-    let lines = {};
-
-    // TODO : looks like no td tag formed
     for (let i = 0; i < currentFiles.length; i++) {
         let line = document.createAttribute('tr');
 
         // This sub cycle makes each line 9 elements length.
         for (; i % 9 <= 9 && i < currentFiles.length; i++) {
-            line.appendChild(formTagFromFile(currentFiles[i]));
+            let element = document.createAttribute('td');
+            element.appendChild(formTagFromFile(currentFiles[i]));
+            line.appendChild(element);
         }
 
-        lines.put(line);
+        table.appendChild(line);
     }
-
-    lines.forEach(element => {
-        table.appendChild(element);
-    })
 }
 
 function removeAllChild(tag) {
@@ -179,8 +174,8 @@ function formTagFromFile(file) {
 
     addPictureToElement(element, file);
     addFileNameToElement(element, file);
-
     element.addEventListener('click', openFolderByPath(currentPath + '/' + file.fileName));
+    addContextMenuToElement(element);
 
     return element;
 }
@@ -203,6 +198,8 @@ function addFileNameToElement(tagElement, file) {
     elementName.classList.add("element");
 
     element.appendChild(elementName);
+
+    tagElement.appendChild(element);
 }
 
 function addContextMenuToElement(tagElement, file) {

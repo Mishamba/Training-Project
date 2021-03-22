@@ -1,39 +1,37 @@
 document.addEventListener('DOMContentLoaded', signInProcess());
+document.querySelectorAll('.pagination-button')[0].addEventListener('click', nextPage());
+document.querySelectorAll('.pagination-button')[1].addEventListener('click', previousPage());
 
-const menu = document.querySelectorAll('.right-click-menu');
+//REMOVE AFTER FINISH SERVER PART.
+const users = document.querySelectorAll('.user-list tr td button');
 
-menu[0].children[0].addEventListener('click', makeAdmin());
+users.forEach(user => addContextMenuToElement(user));
+//REMOVE AFTER FINISH SERVER PART.
+
+const menu = document.querySelector('.right-click-menu');
+
+menu.children[0].addEventListener('click', makeAdmin());
 
 document.addEventListener('click', event => {
     if (event.button !== 2) {
-        menus.forEach(menu => {
-            menu.classList.remove('active');
-        });
+        menu.classList.remove('active');
     }
 }, false);
 
-menus.forEach(menu => {
-    menu.addEventListener('click', event => {
-        event.stopPropagation();
-    }, false);
-});
+menu.addEventListener('click', event => {
+    event.stopPropagation();
+}, false);
 
-// TODO
-// change role
-// sign_in DONE
-// getAndShowUsers DONE
-// add next user page button to users.html
-
-let jwtToken = undefined;
-let username = undefined;
+var jwtToken = undefined;
 
 var serviceEndpoint = 'http://localhost:8081';
 var loginEndpoint = '/login';
 var usersEndpoint = '/users';
-var changeRoleEndpoint = '/change-role'
-let userStart = 0;
-let userEnd = 20;
-let userStep = 20;
+var changeRoleEndpoint = '/change-role';
+var usersCountEndpoint = '/users-count';
+var userStart = 0;
+var userEnd = 20;
+var userStep = 20;
 
 async function signInProcess() {
     let username = document.querySelector('#username-input');
@@ -57,27 +55,29 @@ async function signInProcess() {
         alert('incorect role');
         signInProcess();
     }
-    
+
     getAndShowUsers();
 }
 
 function getAndShowUsers() {
     let response = fetch(serviceEndpoint + usersEndpoint + '?userStart=' + userStart + '&userEnd=' + userEnd, {
-        method: 'POST', 
+        method: 'POST',
         headers: {
             'Content-Type': 'application/json'
         }
     });
 
-    let jsonResponse = response.json();
+    let jsonResponse = response.json;
 
-    let users = {};
+    if (response.ok) {
+        let users = {};
 
-    for(let i = 0;i<jsonResponse.length;i++) {
-        users.put({username: jsonResponse[i]});
+        for (let i = 0; i < jsonResponse.length(); i++) {
+            users.put({ username: jsonResponse[i] });
+        }
+
+        displayUsers(users);
     }
-
-    displayUsers(users);
 }
 
 function displayUsers(users) {
@@ -85,7 +85,7 @@ function displayUsers(users) {
 
     removeAllChild(table);
 
-
+    // TODO FINISH
 }
 
 function removeAllChild(tag) {
@@ -113,4 +113,96 @@ function addContextMenuToElement(tagElement) {
         menu.style.left = `${event.clientX}px`;
         menu.classList.add('active');
     }, false);
+}
+
+function changeRole() {
+    let username = fileUsername();
+    let response = fetch(serviceEndpoint + '/' + username + changeRoleEndpoint, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    });
+
+    if (!response.ok) {
+        alert('can\'t change role');
+    }
+
+    getAndShowUsers();
+}
+
+function findUsername() {
+    let menu = document.querySelector(".right-click-menu.active");
+    if (menu !== null) {
+        let box = menu.getBoundingClientRect();
+        let element = elementFromPoint(box.top + clientY, box.left + clientX);
+        return element.children[1].textContent;
+    } else {
+        return undefined;
+    }
+}
+
+function nextPage() {
+    let usersCount = findUsersCount()
+    if (userEnd + userStep > usersCount) {
+        userEnd = usersCount
+    }
+
+    userStart += userStep;
+    userEnd += userStep;
+
+    getAndShowUsers();
+}
+
+function findUsersCount() {
+    let response = fetch(serviceEndpoint + usersCountEndpoint);
+
+    if (response.ok) {
+        let jsonResponse = response.json();
+
+        return jsonResponse['count'];
+    }
+}
+
+function previousPage() {
+    if (userStart > 0) {
+        userStart -= userStep;
+        userEnd -= userStep;
+    }
+
+    getAndShowUsers();
+}
+
+function makeAdmin() {
+    let username = findUsername();
+
+    let response = fetch(serviceEndpoint + '/' + username + changeRoleEndpoint, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'Authentication': jwtToken
+        },
+        body: JSON.stringify({ username: username })
+    });
+
+    if (response.ok) {
+        getAndShowUsers();
+    } else {
+        alert('can\t change role');
+
+        let jsonResponse = response.json;
+
+        log(jsonResponse['message']);
+    }
+}
+
+function findUsername() {
+    let menu = document.querySelector(".right-click-menu.active");
+    if (menu !== null) {
+        let box = menu.getBoundingClientRect();
+        let element = elementFromPoint(box.top + clientY, box.left + clientX);
+        return element.children[1].textContent;
+    } else {
+        return undefined;
+    }
 }
