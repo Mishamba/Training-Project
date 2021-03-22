@@ -49,15 +49,15 @@ const signInButton = document.querySelector('.sign-in-button');
 signInButton.addEventListener('click', signInProcessor());
 
 async function signInProcessor() {
-    let username = document.querySelector('#username-input');
-    let password = document.querySelector('#password-input');
+    let usrnm = document.querySelector('#username-input');
+    let pswd = document.querySelector('#password-input');
 
     let response = await fetch(serviceEndpoint + loginEndpoint, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ username: username, password: password })
+        body: JSON.stringify({ username: usrnm, password: pswd })
     });
 
     let jsonResponse = await response.json();
@@ -151,6 +151,7 @@ function showFiles() {
 
     let lines = {};
 
+    // TODO : looks like no td tag formed
     for (let i = 0; i < currentFiles.length; i++) {
         let line = document.createAttribute('tr');
 
