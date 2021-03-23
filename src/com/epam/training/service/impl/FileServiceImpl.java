@@ -7,6 +7,9 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
+
+import org.springframework.stereotype.Service;
+
 import java.io.File;
 import java.io.IOException;
 
@@ -15,6 +18,7 @@ import com.epam.training.model.entity.FileEntity;
 import com.epam.training.model.filetype.FileType;
 import com.epam.training.service.FileService;
 
+@Service
 public class FileServiceImpl implements FileService {
 	@Override
 	public List<FileEntity> openFolder(String givenPath) throws ServiceException {

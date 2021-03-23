@@ -1,5 +1,6 @@
 package com.epam.training.model.entity;
 
+import com.epam.training.model.dto.FileDTO;
 import com.epam.training.model.filetype.FileType;
 
 public class FileEntity {
@@ -8,6 +9,16 @@ public class FileEntity {
 	
 	public FileEntity() {
 		super();
+	}
+	
+	public FileEntity(FileType fileType, String fileName) {
+		super();
+		this.fileType = fileType;
+		this.fileName = fileName;
+	}
+	
+	public FileDTO toDTO() {
+		return new FileDTO(this.getFileName(), this.getFileType());
 	}
 
 	public FileType getFileType() {
