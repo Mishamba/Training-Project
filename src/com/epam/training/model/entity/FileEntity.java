@@ -2,10 +2,13 @@ package com.epam.training.model.entity;
 
 import com.epam.training.model.filetype.FileType;
 
-// TODO : rename class
-public class File {
+public class FileEntity {
 	private FileType fileType;
 	private String fileName;
+	
+	public FileEntity() {
+		super();
+	}
 
 	public FileType getFileType() {
 		return fileType;
@@ -43,7 +46,7 @@ public class File {
 			return false;
 		}
 		
-		File that = (File) obj;
+		FileEntity that = (FileEntity) obj;
 		return this.getFileName().equals(that.getFileName()) &&
 				this.getFileType().equals(that.getFileType());
 	}

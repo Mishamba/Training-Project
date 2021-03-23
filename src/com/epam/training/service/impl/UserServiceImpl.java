@@ -1,54 +1,46 @@
 package com.epam.training.service.impl;
 
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.List;
-import java.util.stream.Stream;
-import java.io.File;
-import java.io.IOException;
+import java.util.Optional;
 
-import com.epam.training.model.entity.File;
-import com.epam.training.service.FileService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
-public class FileServiceImpl implements FileService {
+import com.epam.training.exception.ServiceException;
+import com.epam.training.model.entity.User;
+import com.epam.training.model.role.Role;
+import com.epam.training.repository.UserRepository;
+import com.epam.training.service.UserService;
+
+@Service
+public class UserServiceImpl implements UserService {
+	
+	private final UserRepository userRepository;
+	
+	@Autowired
+	public UserServiceImpl(UserRepository userRepository) {
+		super();
+		this.userRepository = userRepository;
+	}
+
 	@Override
-	public List<com.epam.training.model.entity.File> openFolder(String givenPath) {
-		Path path = Path.of(givenPath);
-		if (!path.toFile().exists() || path.toFile().isFile()) {
-			// TODO : throw exception
-			return new ArrayList<File>();
+	public void changeUserRole(String username, Role role) throws ServiceException {
+		Optional<User> optionalUser = userRepository.findById(username);
+		
+		if (optionalUser.isEmpty()) {
+			throw new ServiceException("can't find user");
 		}
 		
-		Stream<Path> paths = Files.list(path);
+		User user = optionalUser.get();
+		user.setRole(role);
 		
-		// TODO : parse paths to File;
+		userRepository.save(user);
+	}
+
+	@Override
+	public List<User> findUsers() throws ServiceException {
+		// TODO Auto-generated method stub
 		return null;
 	}
-	
-	@Override
-	public boolean deleteFolder(String givenPath) {
-		Path path = Path.of(givenPath);
-		if (!path.toFile().exists()) {
-			// TODO : throw exception
-			return false;
-		}
 
-		deleteDirectoryContent(path);
-
-		return Files.deleteIfExists(path);
-	}
-	
-	private void deleteDirectoryContent(Path givenPath) {
-		try (Stream<Path> walk = Files.walk(givenPath)) {
-			walk.sorted(Comparator.reverseOrder()).forEach(path -> {
-	        	try {
-	            	Files.delete(path);
-	        	} catch (IOException e) {
-	        		// TODO : throw exception
-	        	}
-	    	});
-		}
-	}
 }
