@@ -1,8 +1,9 @@
 package com.epam.training.exception;
 
 import org.springframework.http.HttpStatus;
+import org.springframework.security.core.AuthenticationException;
 
-public class JWTAuthenticationException extends Exception {
+public class JWTAuthenticationException extends AuthenticationException {
 	
 	/**
 	 * 

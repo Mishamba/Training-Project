@@ -74,13 +74,12 @@ async function signInProcessor() {
 async function deleteFile() {
     let fileName = findFileName();
 
-    let response = await fetch(serviceEndpoint + deleteFileEndpoint, {
+    let response = await fetch(serviceEndpoint + deleteFileEndpoint + "/" currentPath + "/" + fileName, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
             'Authentication': jwtToken
-        },
-        body: JSON.stringify({ fileName: fileName, path: currentPath })
+        }
     });
 
     if (response.ok) {

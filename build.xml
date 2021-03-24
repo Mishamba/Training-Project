@@ -9,7 +9,7 @@
     <property 
         name="org.apache.tomcat.embed.core-windows" 
         location="C:\Users\Mihail_Nenahov\.ivy2\cache\org.apache.tomcat.embed\tomcat-embed-core\jars"></property>
-
+	
     <property 
         name="org.apache.tomcat.embed.websocket-windows" 
         location="C:\Users\Mihail_Nenahov\.ivy2\cache\org.apache.tomcat.embed\tomcat-embed-websocket\jars"></property>
@@ -289,6 +289,18 @@
     <property 
         name="org.springframework.spring-test-windows" 
         location="C:\Users\Mihail_Nenahov\.ivy2\cache\org.springframework\spring-test\jars"></property>
+	
+	<property
+		name="org.springframework.boot"
+		location="C:\Users\Mihail_Nenahov\.ivy2\cache\org.springframework.boot\spring-boot\jars"></property>
+
+	<property
+		name="org.springframework.boot.autoconfigure"
+		location="C:\Users\Mihail_Nenahov\.ivy2\cache\org.springframework.boot\spring-boot-autoconfigure\jars"></property>
+	
+	<property
+		name="io.jsonwebtoken"
+		location="C:\Users\Mihail_Nenahov\.ivy2\cache\io.jsonwebtoken\jjwt\jars"></property>
 
     <property 
         name="org.springframework.spring-tx-windows" 
@@ -671,7 +683,7 @@
     <property 
         name="org.springframework.security.spring-security-web" 
         location="/home/mishamba/.ivy2/cache/org.springframework.security/spring-security-web/jars"></property>
-
+	
     <property 
         name="org.xmlunit" 
         location="/home/mishamba/.ivy2/cache/org.xmlunit/xmlunit-core/jars"></property>
@@ -1359,6 +1371,18 @@
         <fileset dir="${org.springframework.spring-webmvc-windows}">
             <include name="*.jar"/>
         </fileset>
+		
+		<fileset dir="${org.springframework.boot}">
+			<include name="*.jar"/>
+		</fileset>
+
+		<fileset dir="${org.springframework.boot.autoconfigure}">
+			<include name="*.jar"/>
+		</fileset>
+
+		<fileset dir="${io.jsonwebtoken}">
+			<include name="*.jar"/>
+		</fileset>
 
         <fileset dir="${org.springframework.data.spring-data-commons-windows}">
             <include name="*.jar"/>
@@ -1408,6 +1432,12 @@
 			<dependency org="mysql" name="mysql-connector-java" rev="8.0.23"/>
 			<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-security -->
 			<dependency org="org.springframework.boot" name="spring-boot-starter-security" rev="2.4.3"/>
+			<!-- https://mvnrepository.com/artifact/io.jsonwebtoken/jjwt -->
+			<dependency org="io.jsonwebtoken" name="jjwt" rev="0.9.1"/>
+			<!-- https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api -->
+			<dependency org="javax.servlet" name="javax.servlet-api" rev="4.0.1"/>
+			<!-- https://mvnrepository.com/artifact/javax.annotation/javax.annotation-api -->
+			<dependency org="javax.annotation" name="javax.annotation-api" rev="1.3.2"/>
 		</ivy:cachepath>
 	</target>
 	

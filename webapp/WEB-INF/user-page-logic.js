@@ -60,7 +60,7 @@ async function signInProcess() {
 }
 
 function getAndShowUsers() {
-    let response = fetch(serviceEndpoint + usersEndpoint + '?userStart=' + userStart + '&userEnd=' + userEnd, {
+    let response = fetch(serviceEndpoint + usersEndpoint + '?usersStart=' + userStart + '&usersEnd=' + userEnd, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
