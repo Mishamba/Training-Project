@@ -1,7 +1,7 @@
 package com.epam.training.model.entity;
 
 import com.epam.training.model.dto.FileDTO;
-import com.epam.training.model.filetype.FileType;
+import com.epam.training.model.parameter.FileType;
 
 public class FileEntity {
 	private FileType fileType;

@@ -1,6 +1,6 @@
 package com.epam.training.model.dto;
 
-import com.epam.training.model.filetype.FileType;
+import com.epam.training.model.parameter.FileType;
 
 public class FileDTO {
 	private String fileName;

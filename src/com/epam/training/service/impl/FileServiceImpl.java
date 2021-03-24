@@ -15,7 +15,7 @@ import java.io.IOException;
 
 import com.epam.training.exception.ServiceException;
 import com.epam.training.model.entity.FileEntity;
-import com.epam.training.model.filetype.FileType;
+import com.epam.training.model.parameter.FileType;
 import com.epam.training.service.FileService;
 
 @Service

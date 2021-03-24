@@ -4,11 +4,13 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import com.epam.training.exception.ServiceException;
 import com.epam.training.model.entity.User;
-import com.epam.training.model.role.Role;
+import com.epam.training.model.parameter.Role;
 import com.epam.training.repository.UserRepository;
 import com.epam.training.service.UserService;
 
@@ -38,9 +40,23 @@ public class UserServiceImpl implements UserService {
 	}
 
 	@Override
-	public List<User> findUsers() throws ServiceException {
-		// TODO Auto-generated method stub
-		return null;
+	public User findUserByUsername(String username) throws ServiceException {
+		Optional<User> optionalUser = userRepository.findById(username);
+		
+		if (optionalUser.isEmpty()) {
+			throw new ServiceException("can't get user");
+		}
+		
+		return optionalUser.get();
 	}
 
+	@Override
+	public List<User> findUsers(int pageNumber, int pageSize) throws ServiceException {
+		Pageable page = PageRequest.of(pageNumber, pageSize);
+		return userRepository.findAll(page).getContent();
+	}
+
+	public long findUsersCount() {
+		return userRepository.count();
+	}
 }
