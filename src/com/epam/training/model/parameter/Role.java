@@ -12,7 +12,8 @@ public enum Role {
 	USER(new ArrayList<>()),
 	ADMIN(Arrays.asList(
 			Permission.DELETE_FILE, 
-			Permission.CHANGE_ROLE
+			Permission.CHANGE_ROLE,
+			Permission.GET_USER_BROWSER_PAGE
 	));
 	
 	private List<Permission> permissions;
