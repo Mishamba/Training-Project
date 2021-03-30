@@ -56,6 +56,7 @@ public class UserServiceImpl implements UserService {
 		return userRepository.findAll(page).getContent();
 	}
 
+	@Override
 	public long findUsersCount() {
 		return userRepository.count();
 	}

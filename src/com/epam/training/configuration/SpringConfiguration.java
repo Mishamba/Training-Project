@@ -63,4 +63,9 @@ public class SpringConfiguration {
     public HibernateTransactionManager getTransactionManager(SessionFactory sessionFactory) {
         return new HibernateTransactionManager(sessionFactory);
     }
+    
+    @Bean(name = "entityManagerFactory")
+    public LocalSessionFactoryBean sessionFactory() {
+    	return new LocalSessionFactoryBean();
+    }
 }
