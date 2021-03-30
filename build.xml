@@ -1067,7 +1067,7 @@
 		<pathelement path="${src}"/>
 		<pathelement path="${webapp}"/>
 	</path>
-	
+
 	<path id="compile-classpath-windows">
         <fileset dir="${org.apache.tomcat.embed.core-windows}">
             <include name="*.jar"/>
