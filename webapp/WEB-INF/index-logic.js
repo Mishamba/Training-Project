@@ -49,15 +49,15 @@ const signInButton = document.querySelector('.sign-in-button');
 signInButton.addEventListener('click', signInProcessor());
 
 async function signInProcessor() {
-    let username = document.querySelector('#username-input');
-    let password = document.querySelector('#password-input');
+    let usrnm = document.querySelector('#username-input');
+    let pswd = document.querySelector('#password-input');
 
     let response = await fetch(serviceEndpoint + loginEndpoint, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ username: username, password: password })
+        body: JSON.stringify({ username: usrnm, password: pswd })
     });
 
     let jsonResponse = await response.json();
@@ -74,13 +74,12 @@ async function signInProcessor() {
 async function deleteFile() {
     let fileName = findFileName();
 
-    let response = await fetch(serviceEndpoint + deleteFileEndpoint, {
+    let response = await fetch(serviceEndpoint + deleteFileEndpoint + "/" currentPath + "/" + fileName, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
             'Authentication': jwtToken
-        },
-        body: JSON.stringify({ fileName: fileName, path: currentPath })
+        }
     });
 
     if (response.ok) {
@@ -149,22 +148,18 @@ function showFiles() {
 
     removeAllChild(table);
 
-    let lines = {};
-
     for (let i = 0; i < currentFiles.length; i++) {
         let line = document.createAttribute('tr');
 
         // This sub cycle makes each line 9 elements length.
         for (; i % 9 <= 9 && i < currentFiles.length; i++) {
-            line.appendChild(formTagFromFile(currentFiles[i]));
+            let element = document.createAttribute('td');
+            element.appendChild(formTagFromFile(currentFiles[i]));
+            line.appendChild(element);
         }
 
-        lines.put(line);
+        table.appendChild(line);
     }
-
-    lines.forEach(element => {
-        table.appendChild(element);
-    })
 }
 
 function removeAllChild(tag) {
@@ -178,8 +173,8 @@ function formTagFromFile(file) {
 
     addPictureToElement(element, file);
     addFileNameToElement(element, file);
-
     element.addEventListener('click', openFolderByPath(currentPath + '/' + file.fileName));
+    addContextMenuToElement(element);
 
     return element;
 }
@@ -202,6 +197,8 @@ function addFileNameToElement(tagElement, file) {
     elementName.classList.add("element");
 
     element.appendChild(elementName);
+
+    tagElement.appendChild(element);
 }
 
 function addContextMenuToElement(tagElement, file) {

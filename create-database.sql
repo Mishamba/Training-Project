@@ -2,23 +2,12 @@ create database browser ;
 
 use browser ;
 
-create table roles (
-	`role` varchar(10) not null,
-    primary key(`role`)
-);
-
 create table users (
-	id int not null auto_increment,
-	username varchar(30) not null,
+	username varchar(30) not null unique,
     pswd varchar(255) not null,
     `role` varchar(10) not null,
-    primary key(id),
-    foreign key (`role`) references roles(`role`)
+    primary key(username),
 );
-
-insert into roles(`role`) values 
-('user'),
-('admin');
 
 insert into users(username, pswd, `role`) values
 ('mishamba', '$2y$12$uHSPuuw3VbNgE2qYCHL1rOGZAR9wBZJanVKor1MFxXiZdazm9Zmsi', 'admin'),
